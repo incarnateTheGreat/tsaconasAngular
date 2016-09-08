@@ -2,7 +2,8 @@
 
 (function () {
     angular.module('tsaconas', [
-    	"ngRoute"]);
+    	"ngRoute",
+        "oc.lazyLoad"]);
 }());
 
     // angular.module('alcoholEngine', [

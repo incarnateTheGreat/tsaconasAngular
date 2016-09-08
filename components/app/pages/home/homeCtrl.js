@@ -1,11 +1,11 @@
 'use strict';
 
 (function () {
-    angular.module("tsaconas").controller("landingCtrl", landingCtrl);
+    angular.module("tsaconas").controller("homeCtrl", homeCtrl);
 
-    inviteCtrl.$inject = [];
+    // inviteCtrl.$inject = [];
 
-    function landingCtrl() {
+    function homeCtrl() {
 
         var vm = this;
 

@@ -1,31 +1,39 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="tsaconas">
   <head>
-    <title>Landing Page</title>
+    <meta charset="utf-8">
+    <title>Tsaconas: Angular</title>
+    <base href="/">
+
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" type="text/css" href="landingStyle.css" />
+    <link rel="stylesheet" type="text/css" href="/angular/css/landingStyle.css" />
 
     <!-- EXTERNAL DEPENDENCIES -->
-    <script type="application/javascript"
-            src="/bower_components/angular/angular.js"></script>
-    <script type="application/javascript"
-            src="/bower_components/angular-route/angular-route.js"></script>
+    <script type="application/javascript" src="/angular/bower_components/angular/angular.js"></script>
+    <script type="application/javascript" src="/angular/bower_components/angular-route/angular-route.js"></script>
+    <script type="application/javascript" src="/angular/bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
     <!-- APPLICATION -->
-    <script type="application/javascript" src="/scripts/app/app.js"></script>
-    <script type="application/javascript" src="/scripts/app/app.routes.js"></script>
+    <script type="application/javascript" src="/angular/components/app/app.js"></script>
+    <script type="application/javascript" src="/angular/components/app/app.routes.js"></script>
 
     <!-- COMPONENTS -->
-    
+    <script type="application/javascript" src="/angular/components/app/appCtrl.js"></script>
   </head>
   <body>
-  <nav>
-    <ul>
-      <li><a href="/" title="Landing">Landing</a></li>
-      <li><a href="/about" title="About">About</a></li>
-      <li><a href="/resume" title="Resume">Resume</a></li>
-    </ul>
-  </nav>
+    <nav>
+      <ul>
+        <li><a href="/" title="Home">Home</a></li>
+        <li><a href="/about" title="About">About</a></li>
+        <li><a href="/resume" title="Resume">Resume</a></li>
+      </ul>
+    </nav>
+    <div ng-controller="AppCtrl as vm" ng-cloak>
+      <!-- VIEW CONTENT -->
+      <div id="main">
+          <div ng-view ng-cloak></div>
+      </div>
+    </div>
     <div class="wrapper">
       <div class="flex-container">
         <div class="box one"></div>
