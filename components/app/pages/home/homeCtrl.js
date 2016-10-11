@@ -12,7 +12,7 @@
         activate();
 
         function activate() {
-            console.log("Landing.")
+            console.log("Home.")
         }
     }
 }());
